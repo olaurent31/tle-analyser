@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Olivier\OneDrive\OLIVIER\LOISIRS\TLEANALYSER\TLE Analyser.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A418F7E-EE05-4125-A76F-6C35C53BA180}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>TLE Analyser</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>TLE_Analyser</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EO.WebBrowser">
+      <HintPath>lib\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog_Fleet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="GoogleEarthControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroundStations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Corps.cs" />
+    <Compile Include="Etoile.cs" />
+    <Compile Include="LigneConstellation.cs" />
+    <Compile Include="ElementsOsculateurs.cs" />
+    <Compile Include="OP2SGP4.cs" />
+    <Compile Include="Satellite.cs" />
+    <Compile Include="SatVariables.cs" />
+    <Compile Include="TLE.cs" />
+    <Compile Include="Lune.cs" />
+    <Compile Include="Soleil.cs" />
+    <Compile Include="Terre.cs" />
+    <Compile Include="Dates.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="PreviSatException.cs" />
+    <Compile Include="Maths.cs" />
+    <Compile Include="Matrice.cs" />
+    <Compile Include="Vecteur.cs" />
+    <Compile Include="Observateur.cs" />
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orbit3DControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrbitSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopMostMessageBox.cs" />
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="My\InternalXmlHelper.cs" />
+    <Compile Include="My\MySettings.cs" />
+    <Compile Include="My\MySettingsProperty.cs" />
+    <Compile Include="My\Resources\Resources.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChartForm.resx" />
+    <EmbeddedResource Include="Dialog_Fleet.resx" />
+    <EmbeddedResource Include="GroundStations.resx" />
+    <EmbeddedResource Include="Home.resx" />
+    <EmbeddedResource Include="Options.resx" />
+    <EmbeddedResource Include="OrbitSummary.resx" />
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="Search.resx" />
+    <EmbeddedResource Include="SplashScreen.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
